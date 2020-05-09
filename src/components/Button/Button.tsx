@@ -3,7 +3,7 @@ import './Button.css';
 
 export interface IButtonProp {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = (props: IButtonProp): React.ReactElement => {
