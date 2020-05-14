@@ -1,7 +1,18 @@
 .Button {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 16px;
+  padding: 0.5em 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.25em;
+  border-color: cornflowerblue;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.Button.contained {
   background-color: cornflowerblue;
+}
+
+.Button.outlined {
+  color: cornflowerblue;
 }

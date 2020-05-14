@@ -1,7 +1,9 @@
+import webpack from 'webpack';
+
 module.exports = {
   stories: ['../src/**/*.stories.(tsx|mdx)'],
-  addons: ['@storybook/addon-docs'],
-  webpackFinal: async (config) => {
+  addons: ['@storybook/addon-docs', '@storybook/addon-actions/register'],
+  webpackFinal: async (config: webpack.Configuration) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       use: [
