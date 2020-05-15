@@ -1,11 +1,18 @@
-import {addParameters} from '@storybook/react';
-import {create} from '@storybook/theming';
+import { addDecorator, addParameters } from '@storybook/react';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+import { withKnobs } from "@storybook/addon-knobs";
 
+/*
 const theme = create({
   base: 'dark',
 });
+*/
 
 addParameters({
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
   options: {
     // theme,
     showRoots: true,
@@ -23,3 +30,5 @@ addParameters({
     }
   },
 });
+
+addDecorator(withKnobs);

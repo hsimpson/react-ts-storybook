@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import Card from './Card';
 
-const stories = storiesOf('Components / Card', module);
+export default {
+  title: 'Components/Card',
+  component: Card,
+};
 
-stories.add(
-  'withText',
-  withInfo({ inline: true })(() => <Card text={'Card text'} />)
-);
+
+export const withText = () => <Card text="Card text" />;

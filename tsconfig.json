@@ -1,15 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "module": "CommonJS",
     "moduleResolution": "node",
-    "jsx": "react",
+    "rootDir": "src",
     "sourceMap": true,
-    "rootDir": "src"
+    "target": "ES5"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }

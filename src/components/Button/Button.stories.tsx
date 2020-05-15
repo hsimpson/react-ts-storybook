@@ -1,34 +1,31 @@
 import * as React from 'react';
-import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import Button from './Button';
+import * as CSS from 'csstype';
 
-/*
-addDecorator(withInfo);
-const stories = storiesOf('Components/Button', module);
-
-stories.add('withText', () => <Button text={'Hello Button'} onClick={action('onClick')} />);
-
-stories.add('withEmoji', () => <Button text={'😎🐱🎈'} onClick={action('onClick')} />);
-*/
 
 export default {
   title: 'Components/Button',
-  decorators: [withInfo],
-  parameters: {
-    info: { inline: true, source: false },
-  },
+  component: Button,
+};
+
+const containerStyle: CSS.Properties = {
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  gridRowGap: '10px',
+  minWidth: 0,
+  maxWidth: 0,
 };
 
 export const contained = () => (
-  <div>
+  <div style={containerStyle}>
     <Button text="Hello Button" type="contained" onClick={action('onClick')} />
     <Button text="😎🐱🎈" type="contained" onClick={action('onClick')} />
   </div>
 );
 
 export const outlined = () => (
-  <div>
+  <div style={containerStyle}>
     <Button text="Hello Button" type="outlined" onClick={action('onClick')} />
     <Button text="😎🐱🎈" type="outlined" onClick={action('onClick')} />
   </div>
